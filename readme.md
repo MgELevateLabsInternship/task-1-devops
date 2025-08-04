@@ -1,38 +1,33 @@
-# Github Actions Tutorial
+# Task 1 - DevOps Internship Project 🚀
 
-## Introduction
-Github Actions is a CI/CD tool that allows you to automate your workflow. It is a powerful tool that can be used to build, test, package, release, and deploy your code. In this tutorial, we will learn how to create a Github Actions workflow.
+This is a Node.js-based demo project for DevOps CI/CD pipeline implementation using GitHub Actions and Docker.
 
-## Prerequisites
-- Github account
-- Repository with code (you can use this repository)
+## ✅ Features
+
+- Simple Node.js application
+- GitHub Actions for CI/CD
+- Dockerized setup
+- Automatic Docker image push to DockerHub on every push to `main` branch
+
+## 🛠️ Tech Stack
+
+- Node.js
+- GitHub Actions
+- Docker
+- DockerHub
+
 
 ## Steps
-2. Create a new file in the `.github/workflows` directory
+2. Create a new file in the `.github/workflows/main.yml` directory
 3. Define the workflow
 4. Push the changes to the repository
 5. Check the Actions tab in the repository
 
-## Example Workflow
-```yaml
-name: Test Project
+🔁 GitHub Actions Workflow
 
-on:
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    container:
-      image: node:20
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
-
-```
+Installs dependencies
+Runs test script
+Builds Docker image
+Pushes to DockerHub using GitHub Secrets:
+- DOCKER_USERNAME
+- DOCKER_PASSWORD
