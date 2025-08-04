@@ -24,13 +24,13 @@ jobs:
         run: npm test
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/task-1-devops .
+        run: docker build -t mahi/task-1-devops .
 
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: mahi
+          password: Mahi@docker@7888
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/task-1-devops
+        run: docker push mahi/task-1-devops
