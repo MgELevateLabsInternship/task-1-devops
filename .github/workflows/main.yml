@@ -29,7 +29,7 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          username: mahi
+          username: mahi7888
           password: Mahi@docker@7888
 
       - name: Push Docker image
