@@ -24,7 +24,7 @@ jobs:
         run: npm test
 
       - name: Build Docker image
-        run: docker build -t mahi/task-1-devops .
+        run: docker build -t mahi/nodejs .
 
       - name: Login to DockerHub
         uses: docker/login-action@v2
@@ -33,4 +33,4 @@ jobs:
           password: Mahi@docker@7888
 
       - name: Push Docker image
-        run: docker push mahi/task-1-devops
+        run: docker push mahi/nodejs
