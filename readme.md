@@ -31,3 +31,9 @@ Builds Docker image
 Pushes to DockerHub using GitHub Secrets:
 - DOCKER_USERNAME
 - DOCKER_PASSWORD
+
+After Successfully running Workflow. we will get this
+<img width="1920" height="804" alt="Update readme md · MgELevateLabsInternship_task-1-devops@8fb54f0 - Brave 04-08-2025 21_22_18" src="https://github.com/user-attachments/assets/81b90146-520c-48ce-b641-45756b65d758" />
+
+We will get docker nodejs image in our DockerHub Repo like this
+
